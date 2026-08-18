@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ProductVariant extends Model
 {
+
+    use HasFactory;
+
     protected $fillable = [
         'product_id', 'sku', 'size_label', 'age_years', 'pot_type',
         'price_cents', 'stock_quantity', 'shipping_weight_lbs',
